@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
 
 :root {
     --highlight-color: #32ade2;
@@ -384,4 +385,25 @@ a img:hover {
         width: 16px;
         height: 16px;
     }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;600&display=swap');
+
+.textz {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 48px;
+  color: #FAFAFA;
+}
+
+.textz .container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.textz .dud {
+  color: #757575;
 }

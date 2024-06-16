@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
 
+
 :root {
     --highlight-color: #32ade2;
 }
@@ -64,12 +65,17 @@ header {
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-    transform: translateX(90px);
+    transform: translateX(92px);
     opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-    transform: translateX(315px);
+    transform: translateX(250px);
+    opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+    transform: translateX(420px);
     opacity: 1;
 }
 
@@ -117,10 +123,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Space between elements */
+    gap: 10px; 
     text-align: center;
-    margin: 20px auto; /* Center the section horizontally */
-    padding-bottom: 20px; /* Add some padding at the bottom to separate from footer */
+    margin: 20px auto; 
+    padding-bottom: 20px;
     padding-top: 710px;
 }
 
@@ -129,13 +135,12 @@ section {
     text-align: center;
 }
 
-/* Centering the Trustpilot Button */
 #avis {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 200px); /* Adjusted for the header and footer height */
+    min-height: calc(100vh - 200px); 
 }
 
 .trustpilot-button {
@@ -276,7 +281,6 @@ a img:hover {
     text-decoration: solid;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .navMenu {
         flex-direction: column;
@@ -387,8 +391,6 @@ a img:hover {
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;600&display=swap');
-
 .textz {
   font-family: 'Roboto Mono', monospace;
   font-weight: 600;
@@ -407,3 +409,121 @@ a img:hover {
 .textz .dud {
   color: #757575;
 }
+
+.texty {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    color: #e2f9fd;
+  }
+  
+  .texty .container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .texty .dud {
+    color: #7f99a1;
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    .accordion-item {
+        border-bottom: 1px solid #a6d5e0;
+        width: 100%; /* Prend toute la largeur du conteneur */
+        max-width: 600px; /* Limite la largeur maximale des éléments */
+        button[aria-expanded='true'] {
+            border-bottom: 1px solid #03b5d2;
+        }
+    }
+    button {
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: #7288a2;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+        &:hover, &:focus {
+            cursor: pointer;
+            color: #03b5d2;
+            &::after {
+                cursor: pointer;
+                color: #03b5d2;
+                border: 1px solid #03b5d2;
+            }
+        }
+        .accordion-title {
+            padding: 1em 1.5em 1em 0;
+            color: rgb(177, 215, 250);
+        }
+        .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 9px;
+                left: 5px;
+                width: 10px;
+                height: 2px;
+                background: currentColor;
+            }
+            &::after {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 5px;
+                left: 9px;
+                width: 2px;
+                height: 10px;
+                background: currentColor;
+            }
+        }
+    }
+    button[aria-expanded='true'] {
+        color: #03b5d2;
+        .icon {
+            &::after {
+                width: 0;
+            }
+        }
+        + .accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+    }
+    .accordion-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+    }
+}
+
